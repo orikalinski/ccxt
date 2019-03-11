@@ -505,7 +505,7 @@ class Exchange(object):
     def truncate(num, precision=0):
         if precision > 0:
             decimal_precision = math.pow(10, precision)
-            return math.trunc(round(num * decimal_precision, precision)) / decimal_precision
+            return math.trunc(round(num * decimal_precision, 7)) / decimal_precision
         return int(Exchange.truncate_to_string(num, precision))
 
     @staticmethod
