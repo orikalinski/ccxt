@@ -40,7 +40,7 @@ def decimal_to_precision(n, rounding_mode=ROUND, precision=None, counting_mode=D
     context.traps[decimal.Underflow] = True
     context.rounding = decimal.ROUND_HALF_UP  # rounds 0.5 away from zero
 
-    dec = decimal.Decimal(n)
+    dec = round(decimal.Decimal(n), 6)
     string = str(dec)
     precise = None
 
